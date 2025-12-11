@@ -1,0 +1,151 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+/************* Variabler *************/
+html {
+  --rød: #e21e27;
+  --lysgrå: #ebebeb;
+  --blå: #97b7c2;
+  --hvid: #ffffff;
+  --gråtilcards: #e9e9e9;
+  --sort: #000000;
+
+  --font-main: "Raleway", sans-serif;
+  --font-extrabold: 800;
+  --font-regular: 400;
+}
+
+h1 {
+  font-family: var(--font-main);
+  font-weight: var(--font-extrabold);
+}
+
+/********** Header desktop **********/
+header {
+  position: sticky;
+  top: 0;
+  padding: 12px;
+  background-color: var(--lysgrå);
+  z-index: 10;
+}
+
+.logo img {
+  width: 70px;
+  height: 42px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+nav .menu a {
+  display: block;
+  padding: 5px;
+  color: var(--sort);
+  font-family: var(--font-main);
+  font-weight: var(--font-regular);
+  font-size: 16px;
+  text-decoration: none;
+  text-align: end;
+}
+
+/******* Skal lave hover effekt *******/
+nav .menu a.active {
+}
+.menu a:hover {
+}
+
+/************ Burger menu ************/
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #cccccc;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: var(--lysgrå);
+    opacity: 92%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 30px 20px;
+  }
+
+  nav.active .menu a {
+    font-family: var(--font-main);
+    font-weight: var(--font-regular);
+    font-size: 18px;
+  }
+  nav .menu a {
+    color: var(--grå);
+  }
+}
