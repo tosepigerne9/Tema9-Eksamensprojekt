@@ -1,12 +1,15 @@
 .intro {
-  font-family: var(--font-main);
-  margin-top: 2rem;
-  margin-left: 1.5rem;
-  margin-bottom: 2rem;
+  margin: 2rem;
   line-height: 27px;
 }
 
+.intro p {
+  font-family: var(--font-main);
+  font-weight: var(--font-regular);
+}
+
 .overskrift {
+  font-family: var(--font-main);
   font-weight: var(--font-extrabold);
   font-size: 20px; /*********** HUSK AT ÆNDRE ****************/
 }
@@ -90,6 +93,18 @@ h4 {
 
 /**************** DESKTOP *****************/
 @media (min-width: 900px) {
+  .intro {
+    max-width: 70%;
+    line-height: 38px;
+  }
+
+  .intro p {
+    font-size: 24px;
+  }
+
+  .overskrift {
+    font-size: 30px;
+  }
   .card-list {
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 5rem;
