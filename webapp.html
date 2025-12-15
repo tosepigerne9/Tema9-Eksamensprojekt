@@ -39,10 +39,192 @@
     </header>
 
     <main>
-        <h1>
+        <section class="app">
 
-        </h1>
+            <!-- Profil + Notifikation -->
+            <div class="dashboard-top">
+                <div class="user-info">
+                    <img src="images/profil_billede.png" alt="Profil" class="user-avatar" />
+                    <div class="user-text">
+                        <p class="user-label">Velkommen tilbage,</p>
+                        <p class="user-name">Hans Christian</p>
+                    </div>
+                </div>
+
+                <button class="notif-btn" aria-label="Notifikationer">
+                    <img src="images/notifika.png" alt="Notifikation" class="notif-icon" />
+                </button>
+            </div>
+
+            <!-- Uge tal -->
+            <p class="dashboard-week">&lt; Uge 35</p>
+
+            <!-- KORT MED VIDEO -->
+            <article class="spend-card">
+                <video class="spend-card__video" src="images/kortvideo.mp4" autoplay muted loop playsinline>
+                </video>
+
+                <div class="spend-card__overlay">
+
+                    <div class="spend-card__top-row">
+                        <span class="spend-card__nfc">)))</span>
+                        <span class="spend-card__visa">VISA</span>
+                    </div>
+
+                    <div class="spend-card__content">
+                        <p class="spend-card__transactions">
+                            <span class="spend-card__transactions-used">10</span> / 12 transaktioner brugt
+                        </p>
+
+                        <p class="spend-card__sub">
+                            Hold dig indenfor dit mål og optjen 50 point.
+                        </p>
+
+                        <p class="spend-card__amount">
+                            Dit forbrug denne uge: <span>520 kr.</span>
+                        </p>
+                    </div>
+
+                    <img src="images/logoheader.png" alt="Dankort logo" class="spend-card__logo" />
+                </div>
+            </article>
+
+            <!-- DONUT DIAGRAM -->
+            <section class="donut-section">
+                <div class="donut-wrapper">
+                    <figure class="donut-figure">
+                        <img src="images/donut_diagram.png" alt="Donut diagram" class="donut-img" />
+                    </figure>
+                </div>
+            </section>
+            <!-- CTA: Se dine transaktioner -->
+            <section class="cta-transactions">
+                <p class="cta-text">
+                    Du har 2 transaktioner tilbage.<br />
+                    Holder du dig inden for målet,<br />
+                    optjener du ugens point.
+                </p>
+
+                <button class="cta-btn">
+                    Se dine transaktioner
+                </button>
+            </section>
+
+            <!-- Benchmark-tekst -->
+            <section class="benchmark">
+                <p>
+                    Du er 35% bedre end<br />
+                    gennemsnittet i denne<br />
+                    uge
+                </p>
+            </section>
+
+            <!-- Klimaaftryk-sektion -->
+            <section class="climate">
+                <h2 class="climate-title">Forstå dit klimaaftryk</h2>
+
+                <p class="climate-intro">
+                    Få et visuelt overblik over dine køb – og se,<br />
+                    hvad de betyder for klimaet.
+                </p>
+
+                <article class="co2-card">
+                    <p class="co2-label">Denne uges<br />CO<span>₂</span>-udledning:</p>
+                    <p class="co2-value">14,2 kg CO<span>₂</span></p>
+                </article>
+                <!-- Fordeling af CO2 -->
+                <article class="co2-breakdown-card">
+                    <h3 class="co2-breakdown-title">
+                        Sådan fordeler din CO₂-udledning sig denne uge
+                    </h3>
+
+                    <p class="co2-breakdown-sub">
+                        Beregnet ud fra kortets købs-kategorier:
+                    </p>
+
+                    <figure class="co2-breakdown-figure">
+                        <img src="images/diagram_klima.png"
+                            alt="Cirkeldiagram med fordeling af CO₂-udledning på tøj, takeaway og dagligvarer"
+                            class="co2-breakdown-img" />
+                    </figure>
+                </article>
+
+                <!-- Tekstindsigter -->
+                <article class="insights-card">
+                    <p>
+                        <strong>Tøj</strong> er denne uges største CO₂-driver – overvej at udskyde
+                        unødvendige køb.
+                    </p>
+
+                    <p>
+                        <strong>Takeaway og café</strong> er faldet 10% siden sidste uge – nice!
+                    </p>
+
+                    <p>
+                        <strong>Dagligvarer</strong> fylder mindre end gennemsnittet for brugere
+                        på din alder.
+                    </p>
+                </article>
+            </section> <!-- slut på .climate -->
+            <!-- UGENTLIGT FORBRUG -->
+            <section class="weekly">
+                <h2 class="weekly-title">Ugentlig forbrug:</h2>
+
+                <p class="weekly-intro">
+                    Få bedre vaner – følg din udvikling og bliv<br />
+                    belønnet for gode valg
+                </p>
+
+                <!-- Uge 33 -->
+                <article class="week-card">
+                    <figure class="week-figure">
+                        <img src="images/uge_33.png" alt="Diagram for uge 33" class="week-img" />
+                    </figure>
+                </article>
+
+                <!-- Uge 34 -->
+                <article class="week-card">
+                    <figure class="week-figure">
+                        <img src="images/uge_34.png" alt="Diagram for uge 34" class="week-img" />
+                    </figure>
+                </article>
+
+                <!-- Uge 35 -->
+                <article class="week-card">
+                    <figure class="week-figure">
+                        <img src="images/uge_35.png" alt="Diagram for uge 35" class="week-img" />
+                    </figure>
+                </article>
+            </section>
+            <!-- POINT SEKTION -->
+            <section class="points">
+
+                <h2 class="points-title">Dine point:</h2>
+
+                <p class="points-intro">
+                    Optjen point og indløs til personlige goder<br />
+                    og belønninger.
+                </p>
+
+                <!-- Optjente point -->
+                <article class="point-box">
+                    <h3 class="point-label">Optjent i alt:</h3>
+                    <p class="point-value">120 point</p>
+                </article>
+
+                <!-- Mulige point -->
+                <article class="point-box">
+                    <h3 class="point-label">Mulige point denne uge:</h3>
+                    <p class="point-value">170 point</p>
+                </article>
+
+                <!-- Knappen -->
+                <a href="partnere.html" class="point-btn">Se mulige belønninger</a>
+
+            </section>
+        </section>
     </main>
+
 
     <footer>
 
