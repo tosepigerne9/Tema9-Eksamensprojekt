@@ -7,7 +7,8 @@
 }
 
 .overskrift {
-  margin-left: 1.5rem;
+  font-weight: var(--font-extrabold);
+  font-size: 20px; /*********** HUSK AT ÆNDRE ****************/
 }
 
 h4 {
@@ -18,6 +19,7 @@ h4 {
 /*kortet grid*/
 .card-list {
   display: grid;
+  font-family: var(--font-main);
   grid-template-columns: repeat(2, 1fr); /* 2 kort på mobil */
   gap: 20px;
   padding: 0 16px;
@@ -41,7 +43,9 @@ h4 {
   padding: 20px;
   position: relative; /* Gør det muligt at overlappe billedet */
   overflow: visible; /* Billedet må stikke ud af boksen */
-  margin-bottom: 5rem;
+  grid-column: 1 / -1; /* Lader kortet ligge på sin egen række ved at bruge hele grid-bredden */
+  justify-self: center; /* Centrerer kortet horisontalt inden for grid-rækken */
+  max-width: 420px; /* Begrænser bredden*/
 }
 
 .card1 img {
@@ -93,5 +97,16 @@ h4 {
 
   .card img {
     height: 300px;
+  }
+
+  .card1 img {
+    height: 300px;
+  }
+
+  /* Nulstil mobil-reglen for det nederste kort på desktop */
+  .card1 {
+    grid-column: auto; /* Kortet følger grid’et normalt igen */
+    justify-self: stretch; /* Fylder sin kolonne */
+    max-width: none; /* Ingen max-bredde */
   }
 }
