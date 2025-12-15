@@ -47,7 +47,22 @@ header {
   width: 70px;
   height: 42px;
 }
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
 
+.logo-link img {
+  height: 36px;
+}
+
+.logo-text {
+  font-size: 1rem;
+  color: #000;
+  font-family: var(--font-main);
+}
 nav {
   display: flex;
   align-items: center;
@@ -78,6 +93,16 @@ nav .menu a {
   font-size: 16px;
   text-decoration: none;
   text-align: end;
+}
+.menu-profile a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-icon {
+  width: 22px;
+  height: 22px;
 }
 
 /******* Skal lave hover effekt *******/
@@ -148,4 +173,19 @@ nav .menu a.active {
   nav .menu a {
     color: var(--grå);
   }
+}
+nav .menu li.menu-profile a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav .menu li.menu-profile a span {
+  white-space: nowrap;
+}
+
+nav .menu li.menu-profile a .profile-icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
 }
