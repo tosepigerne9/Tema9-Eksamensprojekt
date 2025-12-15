@@ -61,16 +61,16 @@
 
             <!-- KORT MED VIDEO -->
             <article class="spend-card">
-                <video class="spend-card__video" src="images/kortvideo.mp4" autoplay muted loop playsinline>
+
+                <!-- 1️⃣ Video (bundlag) -->
+                <video class="spend-card__video" src="video/sky.mp4" autoplay muted loop playsinline>
                 </video>
 
+                <!-- 2️⃣ Gennemsigtigt billede ovenpå video -->
+                <img src="images/app_kort.png" alt="" class="spend-card__bg-image" />
+
+                <!-- 3️⃣ Overlay med tekst -->
                 <div class="spend-card__overlay">
-
-                    <div class="spend-card__top-row">
-                        <span class="spend-card__nfc">)))</span>
-                        <span class="spend-card__visa">VISA</span>
-                    </div>
-
                     <div class="spend-card__content">
                         <p class="spend-card__transactions">
                             <span class="spend-card__transactions-used">10</span> / 12 transaktioner brugt
@@ -84,10 +84,10 @@
                             Dit forbrug denne uge: <span>520 kr.</span>
                         </p>
                     </div>
-
-                    <img src="images/logoheader.png" alt="Dankort logo" class="spend-card__logo" />
                 </div>
+
             </article>
+
 
             <!-- DONUT DIAGRAM -->
             <section class="donut-section">
@@ -97,17 +97,30 @@
                     </figure>
                 </div>
             </section>
-            <!-- CTA: Se dine transaktioner -->
+            <!-- CTA: sæt transaktionslof for næste uge -->
             <section class="cta-transactions">
                 <p class="cta-text">
-                    Du har 2 transaktioner tilbage.<br />
+                    Denne uge har du sat dit transaktionsloft på 12. <br /> Du har 2 transaktioner tilbage.<br />
                     Holder du dig inden for målet,<br />
                     optjener du ugens point.
                 </p>
 
-                <button class="cta-btn">
-                    Se dine transaktioner
-                </button>
+                <div class="cta-dropdown">
+                    <button class="cta-btn cta-toggle" aria-expanded="false">
+                        Sæt transaktionsloft for næste uge
+                        <span class="cta-arrow">⌄</span>
+                    </button>
+
+                    <ul class="cta-menu">
+                        <li>10 transaktioner – 50 point</li>
+                        <li>12 transaktioner – 40 point</li>
+                        <li>14 transaktioner – 30 point</li>
+                        <li>16 transaktioner – 20 point</li>
+                        <li>18 transaktioner – 10 point</li>
+                        <li>20 transaktioner – 5 point</li>
+                    </ul>
+                </div>
+
             </section>
 
             <!-- Benchmark-tekst -->
@@ -143,7 +156,7 @@
                     </p>
 
                     <figure class="co2-breakdown-figure">
-                        <img src="images/diagram_klima.png"
+                        <img src="images/diagram_co2.png"
                             alt="Cirkeldiagram med fordeling af CO₂-udledning på tøj, takeaway og dagligvarer"
                             class="co2-breakdown-img" />
                     </figure>
@@ -207,16 +220,18 @@
                 </p>
 
                 <!-- Optjente point -->
-                <article class="point-box">
-                    <h3 class="point-label">Optjent i alt:</h3>
-                    <p class="point-value">120 point</p>
-                </article>
+                <div class="points-boxes">
+                    <article class="point-box">
+                        <h3 class="point-label">Optjent i alt:</h3>
+                        <p class="point-value">120 point</p>
+                    </article>
+                    <article class="point-box">
+                        <h3 class="point-label">Mulige point denne uge:</h3>
+                        <p class="point-value">170 point</p>
+                    </article>
+                </div>
 
-                <!-- Mulige point -->
-                <article class="point-box">
-                    <h3 class="point-label">Mulige point denne uge:</h3>
-                    <p class="point-value">170 point</p>
-                </article>
+
 
                 <!-- Knappen -->
                 <a href="partnere.html" class="point-btn">Se mulige belønninger</a>
@@ -231,6 +246,7 @@
     </footer>
 
     <script src="js/menu.js"></script>
+    <script src="js/dropdown.js"></script>
 </body>
 
 </html>
