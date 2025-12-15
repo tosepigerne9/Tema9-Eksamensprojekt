@@ -4,16 +4,18 @@
   box-sizing: border-box;
 }
 
+/** Generelt **/
+
 p {
   line-height: 1.5;
   font-family: var(--font-main);
 }
 
-main {
-  overflow: hidden;
+.forside_main {
+  font-family: var(--font-main);
 }
 
-/** Hero section **/
+/** Hero section mobile **/
 
 .hero {
   position: relative;
@@ -22,17 +24,12 @@ main {
   overflow: hidden;
 }
 
-.hero_kort {
-  width: 200px;
-  height: auto;
-  right: 20%;
-}
-
 .hero_section {
   position: absolute;
   border-radius: 30px;
   overflow: hidden;
   z-index: 0;
+  inset: 0;
 }
 
 .hero_section video {
@@ -44,17 +41,23 @@ main {
 .hero_indhold {
   position: relative;
   z-index: 1;
-
   display: flex;
   flex-direction: row;
-  gap: 12px;
-
+  justify-content: space-between;
   padding: 30px;
   color: white;
 }
 
+.hero_indhold img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+}
+
 .hero_indhold h1 {
   margin-bottom: 20px;
+  margin-top: 15px;
   font-size: 20px;
   font-family: var(--font-main);
 }
@@ -64,10 +67,16 @@ main {
   font-family: var(--font-main);
 }
 
+.hero_indhold a {
+  width: fit-content;
+}
+
+/** Hero section desktop **/
+
 @media (min-width: 1024px) {
   .hero {
     position: relative;
-    height: 70vh; /* eller 80vh / 100vh */
+    height: 70vh;
     margin: 20px;
     border-radius: 30px;
   }
@@ -75,33 +84,38 @@ main {
   .hero_indhold {
     position: relative;
     z-index: 1;
-
     height: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding: 60px;
+  }
+
+  .hero_indhold h1 {
+    font-size: 60px;
+  }
+
+  .hero_indhold h2 {
+    font-size: 20px;
   }
 
   .hero_indhold img {
     position: absolute;
-    width: 500px;
-    right: 60px;
-    bottom: 60px;
-    width: 500px;
+    right: 80px;
+    bottom: 80px;
+    width: 600px; /* 👈 gør kortet større */
+    max-width: none;
   }
 }
 
 /** Skrald section **/
 
 .skrald {
-  padding: 25px;
+  padding: 40px;
+  margin-bottom: 60px;
 }
-
 .skrald h1 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   margin-top: 40px;
 }
 
@@ -110,7 +124,16 @@ main {
   width: 90%;
   margin: 20px auto;
   border-radius: 40px;
+  margin-top: 20px;
 }
+
+.skrald_tekst {
+  margin: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/** Skrald section desktop **/
 
 @media (min-width: 800px) {
   .skrald {
@@ -143,6 +166,12 @@ main {
   height: auto;
 }
 
+@media (min-width: 800px) {
+  .card_circle img {
+    width: 800px;
+  }
+}
+
 /** Globe section **/
 
 .globe {
@@ -166,7 +195,7 @@ main {
 
 .globe img {
   margin-top: 50px;
-  width: 200px;
+  width: 300px;
   height: auto;
 }
 
@@ -206,36 +235,21 @@ main {
   }
 }
 
+/** Tekst **/
+
 .tekst_section {
-  padding: 100px;
-}
-
-/** Natur vide **/
-
-.video_natur {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  margin: 20px;
-}
-
-.video_natur video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 30px;
-}
-
-.video_natur h1 {
-  position: absolute;
-  top: 50%; /* centrerer vertikalt */
-  left: 50%; /* centrerer horisontalt */
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2em;
   text-align: center;
-  padding: 0 20px; /* lidt luft til kanterne */
+  padding: 150px;
 }
+
+@media (min-width: 768px) {
+  .tekst_section {
+    font-size: 30px;
+    padding: 250px;
+  }
+}
+
+/** How to **/
 
 .howto_section video {
   width: 500px;
@@ -246,7 +260,7 @@ main {
 }
 
 .howto {
-  padding: 40px;
+  padding: 60px;
   background-color: #ebebeb;
   margin: 40px;
   border-radius: 30px;
@@ -254,4 +268,81 @@ main {
 
 .howto h2 {
   margin-bottom: 20px;
+}
+
+.howto p {
+  line-height: 3.5;
+}
+
+@media (min-width: 768px) {
+  .howto_section {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .howto {
+    flex: 1; /* fylder tilgængelig plads */
+    border-radius: 30px;
+    font-size: 25px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column; /* for at holde tekst og knap lodret */
+    justify-content: center; /* centrerer indhold lodret */
+  }
+
+  .howto_section video {
+    flex: 1; /* tager tilgængelig plads */
+    order: 2; /* sørger for, at den vises til højre */
+    width: 100%; /* fylder flexbox */
+    max-width: 500px; /* maks bredde */
+  }
+
+  .howto .knap {
+    width: auto; /* vigtig, så den ikke strækkes */
+    align-self: flex-start; /* placer knappen til venstre */
+  }
+}
+
+/** Natur video **/
+
+.video_natur {
+  position: relative;
+  width: 90%;
+  max-width: 1800px;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.video_natur video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video_natur h1 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 800px) {
+  .video_natur {
+    height: 220px;
+  }
+
+  .video_natur h1 {
+    font-size: 20px;
+  }
 }
