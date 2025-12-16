@@ -70,49 +70,11 @@ p {
 .hero_indhold a {
   width: fit-content;
 }
-
-/** Hero section desktop **/
-
-@media (min-width: 1024px) {
-  .hero {
-    position: relative;
-    height: 70vh;
-    margin: 20px;
-    border-radius: 30px;
-  }
-
-  .hero_indhold {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 60px;
-  }
-
-  .hero_indhold h1 {
-    font-size: 60px;
-  }
-
-  .hero_indhold h2 {
-    font-size: 20px;
-  }
-
-  .hero_indhold img {
-    position: absolute;
-    right: 80px;
-    bottom: 80px;
-    width: 600px; /* 👈 gør kortet større */
-    max-width: none;
-  }
-}
-
 /** Skrald section **/
 
 .skrald {
   padding: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 .skrald h1 {
   margin-bottom: 20px;
@@ -130,7 +92,91 @@ p {
 .skrald_tekst {
   margin: 40px;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 90px;
+}
+
+/* ========== SoMe karrusel (mobil først) ========== */
+.some-carousel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 12px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track img {
+  width: 150px;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* pile */
+.carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--lysgrå);
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+}
+
+/** Hero section desktop **/
+
+@media (min-width: 1024px) {
+  .hero {
+    position: relative;
+    height: 80vh;
+    margin: 20px;
+    border-radius: 30px;
+  }
+
+  .hero_indhold {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+  }
+
+  .hero_indhold h1 {
+    font-size: 50px;
+  }
+
+  .hero_indhold h2 {
+    font-size: 20px;
+  }
+
+  .hero_indhold img {
+    position: absolute;
+    right: 80px;
+    bottom: 80px;
+    width: 600px; /* 👈 gør kortet større */
+    max-width: none;
+  }
 }
 
 /** Skrald section desktop **/
@@ -143,6 +189,10 @@ p {
     max-width: 1200px;
     margin: 0 auto;
   }
+}
+.skrald_tekst {
+  text-align: left;
+  margin-bottom: 0;
 }
 
 /** Card circle section **/
@@ -252,11 +302,14 @@ p {
 /** How to **/
 
 .howto_section video {
-  width: 500px;
+  width: 90%;
+  max-width: 90%;
   height: auto;
-  display: block;
+  object-fit: contain;
   border-radius: 30px;
-  margin: 30px;
+  margin: 30px 0px;
+  margin-left: 25px;
+  display: block;
 }
 
 .howto {
@@ -279,30 +332,28 @@ p {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    gap: 40px;
-    padding: 40px;
+    gap: 10px;
+    padding: 90px;
   }
 
   .howto {
-    flex: 1; /* fylder tilgængelig plads */
-    border-radius: 30px;
-    font-size: 25px;
+    font-size: 20px;
     padding: 40px;
-    display: flex;
-    flex-direction: column; /* for at holde tekst og knap lodret */
-    justify-content: center; /* centrerer indhold lodret */
+    max-width: 520px;
+    margin-left: 125px;
   }
 
   .howto_section video {
-    flex: 1; /* tager tilgængelig plads */
-    order: 2; /* sørger for, at den vises til højre */
-    width: 100%; /* fylder flexbox */
-    max-width: 500px; /* maks bredde */
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
   }
 
   .howto .knap {
-    width: auto; /* vigtig, så den ikke strækkes */
-    align-self: flex-start; /* placer knappen til venstre */
+    width: auto;
+    align-self: flex-start;
+    margin-top: 58px;
   }
 }
 
@@ -310,9 +361,9 @@ p {
 
 .video_natur {
   position: relative;
-  width: 90%;
+  width: 97%;
   max-width: 1800px;
-  height: 400px;
+  height: 500px;
   margin: 20px auto;
   border-radius: 30px;
   overflow: hidden;
@@ -335,6 +386,28 @@ p {
   font-size: 50px;
   text-align: center;
   padding: 20px;
+}
+@media screen and (min-width: 900px) {
+  .some-carousel {
+    max-width: 1100px;
+    padding: 0 40px;
+  }
+
+  .carousel-track img {
+    width: 190px; /* desktop: 4–5 billeder synlige */
+  }
+
+  .carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 28px;
+    border-radius: 999px;
+    background: var(--lysgrå);
+    font-size: 28px;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 800px) {
