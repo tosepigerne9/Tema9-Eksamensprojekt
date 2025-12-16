@@ -45,7 +45,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   padding: 30px;
-  color: white;
+  color: var(--hvid);
 }
 
 .hero_indhold img {
@@ -152,7 +152,7 @@ p {
   align-items: center;
   gap: 20px;
   padding: 40px;
-  background-color: #ebebeb;
+  background-color: var(--lysgrå);
   border-radius: 30px;
   margin: 20px;
 }
@@ -203,8 +203,8 @@ p {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background-color: #97b7c2;
-  color: #ffffff;
+  background-color: var(--blå);
+  color: var(--hvid);
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
@@ -261,7 +261,7 @@ p {
 
 .howto {
   padding: 60px;
-  background-color: #ebebeb;
+  background-color: var(--lysgrå);
   margin: 40px;
   border-radius: 30px;
 }
@@ -331,7 +331,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--hvid);
   font-size: 50px;
   text-align: center;
   padding: 20px;
