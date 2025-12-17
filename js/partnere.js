@@ -3,7 +3,7 @@ const SUPABASE_URL = "https://afjutwclepcrcssmvfwj.supabase.co";
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFmanV0d2NsZXBjcmNzc212ZndqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU3MjIxMDUsImV4cCI6MjA4MTI5ODEwNX0.wOJZVLMMj_zpMDqrd21kGdVVw_6DzH8nEqWBswHcB5c";
 const BUCKET = "partnerbilleder";
 
-// 2. Hent data fra tabellen
+// 2. Hent data fra tabellen // select=* henter alt tilgængelige data
 function hentSamarbejdspartnere() {
   return fetch(`${SUPABASE_URL}/rest/v1/Samarbejdspartnere?select=*`, {
     headers: {
@@ -41,6 +41,7 @@ function showCards(items) {
     card.className = "card";
 
     card.innerHTML = `
+    <a href="partnerprofil.html?id=${item.id}">
 
       <img src="${imageUrl}" alt="${item.beskrivelse}">
 
@@ -54,6 +55,7 @@ function showCards(items) {
       <p class="points">
     <strong> Point: ${item.point} </strong>
     </p>
+    </a>
     `;
 
     container.appendChild(card);

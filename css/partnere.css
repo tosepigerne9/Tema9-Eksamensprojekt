@@ -1,3 +1,4 @@
+/***************** Alle partnere **************/
 .intro {
   margin: 2rem;
   line-height: 27px;
@@ -10,6 +11,7 @@
 
 .overskrift {
   font-family: var(--font-main);
+  font-weight: var(--font-extrabold);
   font-weight: 700;
   font-size: 32px;
   line-height: 1.2;
@@ -31,6 +33,21 @@ h4 {
   grid-template-columns: repeat(2, 1fr); /* 2 kort på mobil */
   gap: 20px;
   padding: 0 16px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--font-main);
+}
+
+.card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Selve kortet */
@@ -132,5 +149,56 @@ h4 {
     grid-column: auto; /* Kortet følger grid’et normalt igen */
     justify-self: stretch; /* Fylder sin kolonne */
     max-width: none; /* Ingen max-bredde */
+  }
+}
+
+/***************** Hver partner **************/
+.partnerprofiler {
+  background-color: var(--lysgrå);
+  width: 100%;
+  border-radius: 40px; /* Store runde hjørner */
+  padding: 30px;
+  position: relative; /* Gør det muligt at overlappe billedet */
+  overflow: visible; /* Billedet må stikke ud af boksen */
+}
+
+.partnerskaber img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* beskærer billedet pænt */
+  border-radius: 40px;
+  display: block;
+  /* Løfter billedet op over boksen */
+  margin: -10px auto 0; /* -10px rykker billedet op og ned, auto 0 centrerer det */
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .partnerprofiler {
+    max-width: 900px;
+    margin: 3rem auto;
+  }
+
+  .partnerprofiler section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .billede_partner img {
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 40px;
+  }
+
+  .beskrivelse {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .info {
+    font-size: 1.2rem;
   }
 }
