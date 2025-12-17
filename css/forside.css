@@ -64,7 +64,7 @@ p {
 
 .hero_indhold h2 {
   font-size: 15px;
-  font-family: var(--font-main);
+  font-weight: var(--font-regular);
 }
 
 .hero_indhold a {
@@ -85,7 +85,7 @@ p {
   display: block;
   width: 90%;
   margin: 20px auto;
-  border-radius: 40px;
+  border-radius: 30px;
   margin-top: 20px;
 }
 
@@ -128,7 +128,6 @@ p {
   border-radius: 14px;
 }
 
-/* pile */
 .carousel-btn {
   display: flex;
   align-items: center;
@@ -200,6 +199,7 @@ p {
 .card_circle {
   display: flex;
   align-items: center;
+  flex-direction: column;
   gap: 20px;
   padding: 40px;
   background-color: var(--lysgrå);
@@ -214,11 +214,17 @@ p {
 .card_circle img {
   width: 200px;
   height: auto;
+  width: min(320px, 80%);
+  align-items: center;
 }
 
 @media (min-width: 800px) {
+  .card_circle {
+    flex-direction: row; /* 👈 side om side igen */
+    align-items: center;
+  }
   .card_circle img {
-    width: 800px;
+    width: 500px;
   }
 }
 
@@ -251,7 +257,7 @@ p {
 
 .knap {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 80px;
   padding: 12px 25px;
   background-color: var(--blå);
   color: var(--hvid);
@@ -271,6 +277,7 @@ p {
 
   .globe_tekst {
     flex: 1;
+    margin-left: 117px;
   }
 
   .globe_billede {
@@ -332,22 +339,21 @@ p {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    gap: 10px;
-    padding: 90px;
+    gap: 20px; /* kontrolleret afstand */
+    padding: 80px;
   }
 
   .howto {
     font-size: 20px;
     padding: 40px;
     max-width: 520px;
-    margin-left: 125px;
   }
 
   .howto_section video {
     max-width: 380px;
     width: 100%;
     height: auto;
-    border-radius: 24px;
+    border-radius: 30px;
   }
 
   .howto .knap {
