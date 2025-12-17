@@ -15,6 +15,7 @@ img {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 /************* Variabler *************/
 html {
   --rød: #e21e27;
@@ -107,8 +108,10 @@ nav .menu a {
 
 /******* Skal lave hover effekt *******/
 nav .menu a.active {
+  color: #e21e27;
 }
 .menu a:hover {
+  color: #e21e27;
 }
 
 /************ Burger menu ************/
@@ -188,4 +191,162 @@ nav .menu li.menu-profile a .profile-icon {
   width: 22px;
   height: 22px;
   flex: 0 0 auto;
+}
+
+/******footer*******/
+
+.footer {
+  padding: 2rem 1rem;
+  background: #ffffff;
+  font-family: var(--font-main);
+}
+
+.footer-inner {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Cards */
+.footer-card {
+  border-radius: 24px;
+  padding: 1.5rem;
+}
+
+/* Top section */
+.footer-links {
+  background: #f2f2f2;
+  position: relative;
+}
+
+.footer-links h3 {
+  margin: 15px 20px 15px;
+  font-size: 30px;
+}
+
+.footer-links ul {
+  font-size: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0 20px 15px;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.footer-links a::before {
+  content: "›";
+  color: #e21e27;
+  margin-right: 0.5rem;
+}
+
+/* Social icons */
+.socials {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socials a {
+  width: 20px;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.socials a::before {
+  content: none;
+  margin-right: 0;
+}
+
+/* Bottom section */
+.footer-brand {
+  background: #e21e27;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  min-height: 220px;
+}
+
+.footer-brand p {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  margin-left: -1rem;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.footer_logo {
+  width: 16px;
+  height: auto;
+  align-self: flex-start;
+}
+
+.footer_logo img {
+  width: 70px;
+  height: auto;
+  display: block;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 3rem 2rem;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .footer-card {
+    flex: 1;
+  }
+
+  .footer-links {
+    min-height: 240px;
+  }
+
+  .footer-links a:hover {
+    color: #e21e27;
+  }
+
+  .footer-brand {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+
+  .footer_logo {
+    width: 32px;
+    align-self: flex-start;
+  }
 }

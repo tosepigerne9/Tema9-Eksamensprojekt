@@ -47,8 +47,8 @@ body {
 }
 
 .notif-icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 /* ---------- Uge ---------- */
@@ -77,11 +77,12 @@ body {
 .spend-card__bg-image {
   position: absolute;
   inset: 0;
-  width: 100%;
+  width: 104%;
   height: 100%;
   object-fit: cover;
   z-index: 2;
   pointer-events: none;
+  margin-left: -8px;
 }
 .spend-card__overlay {
   position: relative;
@@ -255,7 +256,7 @@ body {
 }
 
 .climate-title {
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: var(--font-extrabold);
   margin-bottom: 10px;
 }
@@ -298,7 +299,7 @@ body {
 
 .co2-breakdown-card {
   background-color: var(--lysgrå);
-  border-radius: 24px;
+  border-radius: 30px;
   padding: 18px 20px 22px;
   margin-top: 18px;
 }
@@ -327,7 +328,7 @@ body {
 
 .insights-card {
   background-color: var(--lysgrå);
-  border-radius: 24px;
+  border-radius: 30px;
   padding: 18px 20px 22px;
   margin-top: 16px;
 }
@@ -348,7 +349,7 @@ body {
 }
 
 .weekly-title {
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: var(--font-extrabold);
   margin-bottom: 10px;
   margin-top: 90px;
@@ -364,7 +365,7 @@ body {
 
 .week-card {
   background-color: var(--hvid);
-  border-radius: 24px;
+  border-radius: 30px;
   padding: 12px 14px;
   margin-bottom: 18px;
 }
@@ -385,7 +386,7 @@ body {
 }
 
 .points-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   margin-bottom: 10px;
 }
@@ -399,9 +400,9 @@ body {
 
 .point-box {
   background-color: var(--gråtilcards);
-  padding: 25px;
-  border-radius: 20px;
-  margin-bottom: 20px;
+  padding: 40px;
+  border-radius: 30px;
+  margin-bottom: 34px;
   text-align: center;
 }
 
@@ -456,7 +457,7 @@ body {
   }
 
   .donut-section {
-    width: 45%;
+    width: 49%;
     margin-top: 20px;
     margin-bottom: 0;
   }
@@ -522,11 +523,11 @@ body {
   .co2-breakdown-card,
   .insights-card {
     background-color: var(--lysgrå);
-    border-radius: 24px;
+    border-radius: 30px;
   }
 
   .co2-breakdown-img {
-    max-width: 420px;
+    max-width: 619px;
     margin: 0 auto;
     display: block;
   }
