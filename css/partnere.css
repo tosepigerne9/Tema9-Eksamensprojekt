@@ -12,8 +12,7 @@
 .overskrift {
   font-family: var(--font-main);
   font-weight: var(--font-extrabold);
-  font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.2;
   margin-bottom: 16px;
   color: var(--sort);
@@ -172,6 +171,14 @@ h4 {
   margin: -10px auto 0; /* -10px rykker billedet op og ned, auto 0 centrerer det */
   margin-bottom: 1.5rem;
 }
+.beskrivelse {
+  font-family: var(--font-main);
+  font-weight: var(--font-extrabold);
+}
+.info {
+  font-family: var(--font-main);
+  font-weight: var(--font-regular);
+}
 
 @media (min-width: 768px) {
   .partnerprofiler {
@@ -195,7 +202,7 @@ h4 {
   }
 
   .beskrivelse {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
   }
   .info {
