@@ -10,10 +10,15 @@
 
 .overskrift {
   font-family: var(--font-main);
-  font-weight: var(--font-extrabold);
-  font-size: 20px; /*********** HUSK AT ÆNDRE ****************/
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--sort);
 }
-
+h3.overskrift {
+  font-size: 20px;
+}
 h4 {
   margin-bottom: 1rem;
   text-align: center; /*centrere*/
@@ -32,7 +37,7 @@ h4 {
 .card {
   background-color: var(--lysgrå);
   width: 100%;
-  border-radius: 35px; /* Store runde hjørner */
+  border-radius: 30px; /* Store runde hjørner */
   padding: 20px;
   position: relative; /* Gør det muligt at overlappe billedet */
   overflow: visible; /* Billedet må stikke ud af boksen */
@@ -42,7 +47,7 @@ h4 {
 .card1 {
   background-color: var(--lysgrå);
   width: 100%;
-  border-radius: 35px; /* Store runde hjørner */
+  border-radius: 30px; /* Store runde hjørner */
   padding: 20px;
   position: relative; /* Gør det muligt at overlappe billedet */
   overflow: visible; /* Billedet må stikke ud af boksen */
@@ -55,7 +60,7 @@ h4 {
   width: 100%;
   height: 250px; /* ← gør billedet lavere = mere aflangt */
   object-fit: cover; /* beskærer billedet pænt */
-  border-radius: 40px;
+  border-radius: 30px;
   display: block;
   /* Løfter billedet op over boksen */
   margin: -10px auto 0; /* -10px rykker billedet op og ned, auto 0 centrerer det */
@@ -67,7 +72,7 @@ h4 {
   width: 100%;
   height: 250px;
   object-fit: cover; /* beskærer billedet pænt */
-  border-radius: 40px;
+  border-radius: 30px;
   display: block;
   /* Løfter billedet op over boksen */
   margin: -10px auto 0; /* -10px rykker billedet op og ned, auto 0 centrerer det */
@@ -94,16 +99,20 @@ h4 {
 /**************** DESKTOP *****************/
 @media (min-width: 900px) {
   .intro {
-    max-width: 70%;
-    line-height: 38px;
+    max-width: 49%;
+    line-height: 36px;
+    margin-left: 100px;
   }
 
   .intro p {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .overskrift {
     font-size: 30px;
+  }
+  h3.overskrift {
+    font-size: 20px;
   }
   .card-list {
     grid-template-columns: repeat(3, 1fr);
